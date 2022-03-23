@@ -49,6 +49,13 @@ namespace Data_Structures
             Data = Convert.ToInt32(Console.ReadLine());
             linked_list.AddSpecific(Data, node6);
             linked_list.Display();
+
+            linked_list.Display();
+            Console.Write("Pick a value you want to delete: ");
+            Data = Convert.ToInt32(Console.ReadLine());
+            linked_list.DeleteSpecific(Data);
+            linked_list.Display();
+
         }
     }
 }

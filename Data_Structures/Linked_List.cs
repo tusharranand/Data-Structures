@@ -110,6 +110,25 @@ namespace Data_Structures
                 temp = temp.Next;
             }
         }
+        public void DeleteSpecific(int Data)
+        {
+            Node temp = Head;
+            while (temp != null)
+            {
+                if (temp.Data == Data)
+                {
+                    Head = temp.Next;
+                    temp = null;
+                    break;
+                }
+                else if (temp.Next.Data == Data)
+                {
+                    temp.Next = temp.Next.Next;
+                    break;
+                }
+                temp = temp.Next;
+            }
+        }
         public void Display()
         {
             Node temp = Head;
