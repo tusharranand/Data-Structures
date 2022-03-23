@@ -28,6 +28,9 @@ namespace Data_Structures
             Node node5 = new Node(25);
             linked_list.AddNodeatStart(node5);
             linked_list.Display();
+
+            linked_list.Delete_First();
+            linked_list.Display();
         }
     }
 }

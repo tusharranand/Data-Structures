@@ -55,17 +55,30 @@ namespace Data_Structures
                 Head = node;
             }
         }
+        public void Delete_First()
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("List already empty, nothing to delete.");
+            }
+            else
+            {
+                Node temp = Head;
+                Head = Head.Next;
+                Console.WriteLine("The node with value {0} was deleted.", temp.Data);
+            }
+        }
         public void Display()
         {
             Node temp = Head;
 
             if (temp == null)
             {
-                Console.WriteLine("\nLinked List is empty.");
+                Console.WriteLine("Linked List is empty.");
             }
             else
             {
-                Console.WriteLine("\nLinked List is as follows");
+                Console.WriteLine("Linked List is as follows");
                 while (temp != null)
                 {
                     Console.Write(temp.Data);
@@ -75,6 +88,7 @@ namespace Data_Structures
                     }
                     temp = temp.Next;
                 }
+                Console.WriteLine("\n");
             }
         }
     }
