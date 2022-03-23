@@ -97,6 +97,19 @@ namespace Data_Structures
             }
             return false;
         }
+        public void AddSpecific(int Data, Node node)
+        {
+            Node temp = Head;
+            while (temp != null)
+            {
+                if (temp.Data == Data)
+                {
+                    node.Next = temp.Next;
+                    temp.Next = node;
+                }
+                temp = temp.Next;
+            }
+        }
         public void Display()
         {
             Node temp = Head;

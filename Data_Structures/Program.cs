@@ -42,6 +42,13 @@ namespace Data_Structures
                 Console.WriteLine("Data exists in the linked list.\n");
             else
                 Console.WriteLine("Data does not exist in the linked list.\n");
+
+            Node node6 = new Node(26);
+            linked_list.Display();
+            Console.Write("Pick a value to add the new node after: ");
+            Data = Convert.ToInt32(Console.ReadLine());
+            linked_list.AddSpecific(Data, node6);
+            linked_list.Display();
         }
     }
 }
