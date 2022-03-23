@@ -31,6 +31,9 @@ namespace Data_Structures
 
             linked_list.Delete_First();
             linked_list.Display();
+
+            linked_list.Delete_Last();
+            linked_list.Display();
         }
     }
 }
