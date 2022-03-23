@@ -16,17 +16,17 @@ namespace Data_Structures
             Node node1 = new Node(22);
             Node node2 = new Node(23);
             Node node3 = new Node(24);
-
             linked_list.AddNode(node1);
             linked_list.AddNode(node2);
             linked_list.AddNode(node3);
-
             linked_list.Display();
 
             Node node4 = new Node(21);
-
             linked_list.AppendNode(node4);
+            linked_list.Display();
 
+            Node node5 = new Node(25);
+            linked_list.AddNodeatStart(node5);
             linked_list.Display();
         }
     }

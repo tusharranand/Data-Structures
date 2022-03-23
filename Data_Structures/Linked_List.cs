@@ -42,6 +42,19 @@ namespace Data_Structures
                 Tail = node;
             }
         }
+        public void AddNodeatStart(Node node)
+        {
+            if (Head == null && Tail == null)
+            {
+                Head = node;
+                Tail = node;
+            }
+            else
+            {
+                node.Next = Head;
+                Head = node;
+            }
+        }
         public void Display()
         {
             Node temp = Head;
