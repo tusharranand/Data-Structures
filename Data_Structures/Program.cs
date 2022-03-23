@@ -22,6 +22,12 @@ namespace Data_Structures
             linked_list.AddNode(node3);
 
             linked_list.Display();
+
+            Node node4 = new Node(21);
+
+            linked_list.AppendNode(node4);
+
+            linked_list.Display();
         }
     }
 }

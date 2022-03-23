@@ -16,7 +16,6 @@ namespace Data_Structures
             Head = null;
             Tail = null;
         }
-
         public void AddNode(Node node)
         {
             if (Head == null && Tail == null)
@@ -29,7 +28,19 @@ namespace Data_Structures
                 node.Next = Head;
                 Head = node;
             }
-
+        }
+        public void AppendNode(Node node)
+        {
+            if (Head == null && Tail == null)
+            {
+                Head = node;
+                Tail = node;
+            }
+            else
+            {
+                Tail.Next = node;
+                Tail = node;
+            }
         }
         public void Display()
         {
@@ -37,11 +48,11 @@ namespace Data_Structures
 
             if (temp == null)
             {
-                Console.WriteLine("Linked List is empty.");
+                Console.WriteLine("\nLinked List is empty.");
             }
             else
             {
-                Console.WriteLine("Linked List is as follows");
+                Console.WriteLine("\nLinked List is as follows");
                 while (temp != null)
                 {
                     Console.Write(temp.Data);
