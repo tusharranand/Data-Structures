@@ -13,20 +13,20 @@ namespace Data_Structures
             Console.WriteLine("Welcome to Data Structures program.");
 
             Linked_List linked_list = new Linked_List();
-            Node node1 = new Node(22);
-            Node node2 = new Node(23);
-            Node node3 = new Node(24);
-            linked_list.AddNode(node1);
-            linked_list.AddNode(node2);
-            linked_list.AddNode(node3);
+            Node node_one = new Node(22);
+            Node node_two = new Node(23);
+            Node node_three = new Node(24);
+            linked_list.AddNode(node_one);
+            linked_list.AddNode(node_two);
+            linked_list.AddNode(node_three);
             linked_list.Display();
 
-            Node node4 = new Node(21);
-            linked_list.AppendNode(node4);
+            Node node_four = new Node(21);
+            linked_list.AppendNode(node_four);
             linked_list.Display();
 
-            Node node5 = new Node(25);
-            linked_list.AddNodeatStart(node5);
+            Node node_five = new Node(25);
+            linked_list.AddNodeatStart(node_five);
             linked_list.Display();
 
             linked_list.Delete_First();
@@ -43,11 +43,13 @@ namespace Data_Structures
             else
                 Console.WriteLine("Data does not exist in the linked list.\n");
 
-            Node node6 = new Node(26);
+            Node node_six = new Node(26);
             linked_list.Display();
-            Console.Write("Pick a value to add the new node after: ");
-            Data = Convert.ToInt32(Console.ReadLine());
-            linked_list.AddSpecific(Data, node6);
+            Console.Write("Enter the previous value: ");
+            int Prev_Data = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the next value: ");
+            int Next_Data = Convert.ToInt32(Console.ReadLine());
+            linked_list.AddSpecific(Prev_Data, Next_Data, node_six);
             linked_list.Display();
         }
     }
