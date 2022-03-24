@@ -13,7 +13,7 @@ namespace Data_Structures
             Console.WriteLine("Welcome to Data Structures program.");
 
             Linked_List linked_List = new Linked_List();
-            Node node1 = new Node(22);
+            Node node_one = new Node(22);
         }
     }
 }
