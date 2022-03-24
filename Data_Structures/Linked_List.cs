@@ -97,31 +97,26 @@ namespace Data_Structures
             }
             return false;
         }
-        public void AddSpecific(int Data, Node node)
+        public void AddSpecific(int Prev_Data, int Next_Data, Node node)
         {
             Node temp = Head;
             while (temp != null)
             {
-                if (temp.Data == Data)
+                if (temp.Data == Prev_Data && temp.Next.Data == Next_Data)
                 {
                     node.Next = temp.Next;
                     temp.Next = node;
+                    break;
                 }
                 temp = temp.Next;
             }
         }
-        public void DeleteSpecific(int Data)
+        public void DeleteSpecific(int Prev_Data, int Next_Data)
         {
             Node temp = Head;
             while (temp != null)
             {
-                if (temp.Data == Data)
-                {
-                    Head = temp.Next;
-                    temp = null;
-                    break;
-                }
-                else if (temp.Next.Data == Data)
+                if (temp.Data == Prev_Data && temp.Next.Next.Data == Next_Data)
                 {
                     temp.Next = temp.Next.Next;
                     break;
