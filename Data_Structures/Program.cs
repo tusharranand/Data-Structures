@@ -13,13 +13,13 @@ namespace Data_Structures
             Console.WriteLine("Welcome to Data Structures program.");
 
             Linked_List linked_list = new Linked_List();
-            Node node1 = new Node(22);
-            Node node2 = new Node(23);
-            Node node3 = new Node(24);
+            Node node_one = new Node(22);
+            Node node_two = new Node(23);
+            Node node_three = new Node(24);
 
-            linked_list.AddNode(node1);
-            linked_list.AddNode(node2);
-            linked_list.AddNode(node3);
+            linked_list.AddNode(node_one);
+            linked_list.AddNode(node_two);
+            linked_list.AddNode(node_three);
 
             linked_list.Display();
         }
